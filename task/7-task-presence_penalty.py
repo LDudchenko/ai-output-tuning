@@ -12,8 +12,10 @@ from task.app.main import run
 
 
 run(
-    # TODO:
-    #  Use `presence_penalty` parameter with different range (-2.0 to 2.0). (doesn't work with anthropic)
+    OpenAIClient("gpt-4o"),
+    print_request=True,
+    print_only_content=True,
+    presence_penalty=2.0
 )
 
 # In the final result, we can see that the higher `presence_penalty` (2.0) the more LLM is trying to add topics that

@@ -12,9 +12,11 @@ from task.app.main import run
 
 
 run(
-    # TODO:
-    #  1. Use `seed` parameter with value 42 (or whatever you want)
-    #  2. Use `n` parameter with value 5 (with anthropic it won't work)
+    OpenAIClient("gpt-4o"),
+    print_request=True,
+    print_only_content=False,
+    seed=123,
+    n=3
 )
 
 # Check the content in choices. The expected result is that in almost all choices the result will be the same.

@@ -13,7 +13,13 @@ from task.app.main import run
 
 
 run(
+    AnthropicAIClient("claude-3-haiku-20240307"),
+    print_request=True,
+    print_only_content=True,
+)
 
-    print_request=True, # Switch to False if you do not want to see the request in console
-    print_only_content=False, # Switch to True if you want to see only content from response
+run(
+    OpenAIClient("gpt-4o"),
+    print_request=True,
+    print_only_content=True,
 )

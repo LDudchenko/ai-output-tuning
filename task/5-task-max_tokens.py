@@ -8,10 +8,18 @@ from task.app.main import run
 
 
 run(
-    # TODO:
-    #  Use `max_tokens` parameter with value 10
+    AnthropicAIClient("claude-3-haiku-20240307"),
+    print_request=True,
+    print_only_content=False,
+    max_tokens=12
 )
 
+run(
+    OpenAIClient("gpt-4o"),
+    print_request=True,
+    print_only_content=False,
+    max_tokens=12
+)
 
 # Previously, we have seen that the `finish_reason` in choice was `stop`, but now it is `length` or `max_tokens`,
 # and if you check the `content,` it is clearly unfinished.
